@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+.Colegiatura, .AboonoMonedero{
+    display: flex;
+    position: relative;
+    margin-inline: auto;
+    height: 80vh;
+    width: 60vw;
+}
+.row-1{
+
+    background-image: url(../../assets/stacked-waves-haikei.svg);
+    background-size: cover;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.row-1 > *{
+    color:#fff; 
+    list-style-type:none;
+    margin: 0;
+    padding: 10%; 
+    box-shadow:-5px 5px 50px #333;
+    width: 85%;
+    height: 90%;
+    background-color:var(--ibero);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+    .descrip_recibo{
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    .descrip_recibo:nth-child(2){
+        text-align: center;
+        font-size: 20px;
+    }
+    .fecha_recibo{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+.row-2{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: var(--background);
+}
+.pago_navbar{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2%; 
+    padding: 2%;
+}
+    .nav_link_pago, .active{
+        border-radius: 1rem;
+        box-sizing: border-box;
+        padding: 3px 10px;
+        border: 1px solid #333;
+    }
+    .active{
+        border-color: var(--ibero);
+        color: var(--ibero); 
+    }
+/* ignore this */
+.haveAcces{
+    width: min(400px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.haveAcces button{
+    color:#fff;  
+    background-color:hsl(278, 68%, 11%);
+    border-radius: 20px;
+    border:none; 
+    padding: 0.5rem 3rem;
+}
+.haveAcces p{
+    color:hsl(0, 0%, 72%);
+    white-space: nowrap;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form > *{
+    position: relative;
+    margin-block: 5px;
+    padding: 5%;
+    width: 90%;
+}
+.form label{
+    position: absolute;
+    top: 0; 
+    font-size: 10px;
+}
+.form input{
+    box-sizing: border-box;
+    border-radius:5px; 
+    width: 100%;
+    padding: 10px 1rem;
+    position: relative;
+}
+.form input[data-error="true"]{
+    outline:1px solid var(--ibero);
+    border: 1px solid var(--ibero)
+}
+.form input[data-error="false"]{
+    outline:none; 
+    border: solid 2px #333; 
+}
+.form input:focus{
+    border: solid 1px var(--ibero-dark);
+}
+.Submit {
+    padding: 5%;
+    display: block;
+}
+.Submit button{
+    width: 100%;
+    border:none; 
+    background-color:var(--ibero); 
+    color:#fff; 
+    padding: 10px 0; 
+    border-radius: 5rem; 
+}
+.small_inputs{
+    display: flex; 
+}
+.small_inputs > *{
+    width: 50%;
+    display: flex;
+}
+.small_inputs > *:first-of-type input{
+    text-align: center;
+    margin-right:5%;
+}
+.error_input{
+    font-size: 10px;
+    position: absolute;
+    top:75%;
+    left: 6%;
+}
+.error_input_month{
+    line-height:10px;
+    text-align: center;
+    top: 82%; 
+    left: 10px;
+    right: 72%;
+}
+.error_input_cvc{
+    left:auto; 
+    right: 31%;
+}
+.error_input_year{
+    left:29%; 
+}
+.input_abono_conteiner{
+    width: 80%;
+    margin-right: auto;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid var(--ibero-dark) ;
+}
+.input_abono_conteiner input{
+    font-family: var(--p);
+    color: var(--color);
+    background-color: var(--background);
+    font-size: 14px;
+    border-radius: 5px;
+    padding: .5rem 1rem;
+    outline: none;
+    border: none; 
+}
+
+.input_abono_conteiner label{
+    background-color: var(--background);
+    font-family: var(--title);
+    position: absolute;
+    font-size: 14px;
+    color: var(--ibero); 
+    left: 15px;
+    bottom: 10px;
+    transition: 700ms;
+    padding-right: 10px;
+}
+.input_abono_conteiner input:focus + label{
+    transition: 500ms;
+    transform: translateY(-150%);
+}
+.input_abono_conteiner input:not(:placeholder-shown) + label{
+    transform: translateY(-100%);
+}
+/* Phone */
+@media screen and (max-width: 500px){
+    .nav_link_pago, .active{
+        text-align: center;
+        font-size: 7px;
+    }
+    .Colegiatura, .AboonoMonedero{
+        width: 90%;
+        flex-direction: column;
+    }
+    .row-1{
+        padding-block: 5px;
+        width: 100%;
+        justify-content: center;
+    }
+    .row-1 > *{
+        line-height: 15px;
+        height: fit-content;
+        padding: 5px 5%;
+    }
+    .row-1 > * li{
+        padding-block:10px;
+    }
+    .row-1 > * i{
+        font-size: 11px;
+    }
+    .descrip_recibo{
+        font-size: 14px;
+    }
+    .descrip_recibo:nth-child(2){
+        font-size: 16px;
+    }
+    .fecha_recibo{
+        font-size: 11px;
+    }
+    .error_input_year{
+        line-height:10px;
+        text-align: center;
+        top: 80%; 
+        right: 45%;   
+    }
+    .error_input_cvc{
+        left:auto; 
+        right: 24%;
+    }
+    .small_inputs > *{
+        width: fit-content;
+    }
+}

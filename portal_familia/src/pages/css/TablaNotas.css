@@ -1,0 +1,62 @@
+@keyframes fade-in-calificaciones {
+    0%{
+        /* transform: translateX(-100%);  */
+        opacity:0; 
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+.calificaciones{
+    animation:fade-in-calificaciones 500ms forwards;
+    animation-iteration-count: 1; 
+    margin: 1rem; 
+    display:flex; 
+    flex-wrap: wrap;
+}
+.calificaciones > *{
+    box-sizing: border-box;
+    width: 50%;
+    height: fit-content;
+    text-align: center;
+}
+.Tabla_calis{
+    margin: 0 auto; 
+    text-align: center;
+    max-width:320px; 
+    width:100%; 
+}
+.Tabla_calis td{
+    border: 1px solid #333333; 
+}
+.Tabla_calis th{
+    color:var(--blue_light); 
+    border: 1px solid var(--blue_light)
+}
+.semestre_1 h2, .semestre_2 h2{
+    color: var(--dark_blue)
+}
+.calificacion_err{
+    margin-inline: auto;
+    width: 50%; 
+}
+.calificacion_err > *{
+    display: block; 
+    font-size: 25px;
+    color: var(--extra_blue)
+}
+.calificacion_err > i{
+    color: var(--blue_light); 
+    padding: 1rem;
+    font-size: 35px;
+}
+@media screen and (max-width:700px) {
+    .calificaciones>* {
+        min-width: 100%;
+    }
+
+}

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Chonburi&family=Maitree:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@700&display=swap');
+ *{margin:0; padding:0;}
+:root {
+    --title: 'Bungee', cursive; 
+    --sub:700;
+    --p:'Maitree', serif;
+    --ibero-dark:#a12731; 
+    --ibero:#E63946;  
+    --dark_blue: #1D3557; 
+    --extra_blue:#A8DADC; 
+    --background: #F1FAEE; 
+    --dark_background:#202020 ; 
+    --light_background: #F1FAEE ;
+    --color: #000; 
+}
+h1, h2, h3 {
+    transition: all 250ms 0 ease-in; 
+    font-family: var(--title);
+}
+h4, h5, h6 {
+    transition: all 250ms 0 ease-in; 
+    font-family: var(--sub);
+}
+a {
+    color: var(--color); 
+    text-decoration: none;
+}
+a:hover{
+    color: var(--ibero)
+}
+ body {
+    background: hsla(24, 100%, 83%, 1);
+    color: var(--color); 
+    font-family: var(--p);
+    z-index: 1;
+    max-width: 100vw;
+    overflow-x:hidden; 
+    padding-bottom: 2rem;
+}
+body > *{
+    transition:all 250ms ease-in; 
+    transition-delay: 0;
+}
+.ToggleDefault{
+    position: static; 
+    padding: 10px; 
+    cursor: pointer; 
+    font-size:2em;
+}
+    @media screen and (max-width: 600px){
+        .ToggleDefault{
+            position: static; 
+            font-size:35px;
+        }
+    }
