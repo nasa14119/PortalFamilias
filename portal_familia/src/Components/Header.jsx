@@ -6,11 +6,11 @@ function Header() {
   const Toggle = useTheme();
   return (
     <header className="header">
-      <Link to="/">
+      <Link to="/PortalFamilias_Redisen-o">
         <img src="../../Prepa_Ibero.svg" alt="Brnad_logo" />
       </Link>
       <h2>
-        <Link to="/">Portal<br/>Familias</Link>
+        <Link to="/PortalFamilias_Redisen-o">Portal<br/>Familias</Link>
       </h2>
       <Toggle style="OtherToggle"/>
     </header>

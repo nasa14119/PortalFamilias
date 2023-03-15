@@ -11,7 +11,7 @@ function Calificaciones() {
     <Fragment>
       <Header/>
       <span>
-        <Link to="/" className="GoBack">
+        <Link to="/PortalFamilias_Redisen-o/" className="GoBack">
           <i className="fa-solid fa-angles-left"></i> Ir a la pagina principal
         </Link>
       </span>

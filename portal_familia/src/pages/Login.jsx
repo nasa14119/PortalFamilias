@@ -7,7 +7,7 @@ function Login() {
     <div className='login'>
         <main>
             <h1>Portal Familias</h1>
-            <form onSubmit={e=> {e.preventDefault();  navigate("/")}}>
+            <form onSubmit={e=> {e.preventDefault();  navigate("/PortalFamilias_Redisen-o")}}>
                 <div className='login-first'>
                     <label htmlFor="username">Usuario</label>
                     <label htmlFor="digito">Digito</label>
