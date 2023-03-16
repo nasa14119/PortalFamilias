@@ -3,6 +3,8 @@ import {TheContext}from "../Global_Context";
 import useTheme from "../Components/useTheme";
 import {Worker} from "@react-pdf-viewer/core"
 import PdfViewer from "../Components/PdfViewer"
+import Calendario from "/Calendario Prepa 2022.pdf"
+import Logo from "../../public/Prepa_Ibero.svg"
 import {Link} from "react-router-dom"
 import "./main.css";
 function Home() {
@@ -36,14 +38,14 @@ function Home() {
   const Calendar = () =>{
       return (
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.0.279/build/pdf.worker.min.js">
-          <PdfViewer fileUrl="/Calendario Prepa 2022.pdf" />
+          <PdfViewer fileUrl={Calendario} />
         </Worker>
       )
   }
   return (
     <Fragment>
       <header className="header_home">
-        <img src="../../src/assets/Prepa_Ibero.svg" alt="Brnad_logo" />
+        <img src={Logo} alt="Brnad_logo" />
         <h2>Portal Familias</h2>
         <h2 className="profile" id="clicable_icon" onClick={handleClick}>
           <i className="fa-solid fa-user"></i>
