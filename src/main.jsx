@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import "./pages/index.css"
 import Home from "./pages/Home"
@@ -54,6 +54,16 @@ const router = createBrowserRouter([
     element:<Login/>
   },
 ]);
+const CssChangeTheme = () => {
+  const CSSvariable = document.documentElement;
+  if (window.localStorage.getItem("theme") === "true") {
+    CSSvariable.style.setProperty("--color", "#fff");
+    CSSvariable.style.setProperty("--background", "var(--dark_background)");
+  } else {
+    CSSvariable.style.setProperty("--color", "#000");
+    CSSvariable.style.setProperty("--background", "var(--light_background)");
+  }
+}
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Global_Context>

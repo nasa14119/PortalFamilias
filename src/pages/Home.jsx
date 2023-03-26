@@ -14,7 +14,6 @@ function Home() {
   const calendar_ref = useRef(); 
   const [calendar_conteiner_state, setCalendarState] = useState()
   const [calendar, open_calendar] = useState(false)
-  const {isDark} = useContext(TheContext)
   const Toggle = useTheme()
   const handleClick = () => {
     more_info.current[1].style.display = "block"
@@ -136,7 +135,7 @@ function Home() {
             </a>
           </div>
         </div>
-        <div className="OnlyCompHome" style={{ boxShadow: isDark && "none" }}>
+        <div className="OnlyCompHome" style={{ boxShadow: window.localStorage.getItem("theme")&& "none" }}>
           <span>Noticias</span>
           <div className="OnlyCompHome_news_conteiner">
             <div className="news_conteiner">

@@ -1,10 +1,10 @@
-import React, {createContext, useEffect, useState, useMemo} from 'react'
+import React, {createContext, useEffect, useState} from 'react'
 export const TheContext = createContext(null); 
 function Global_Context(props) {
-    const [isDark, setTheme] = useState(true);
+    const [isDark, setTheme] = useState(window.localStorage.getItem("theme") === "true");
     const CssChangeTheme = () => {
       const CSSvariable = document.documentElement;
-      if (isDark) {
+      if (window.localStorage.getItem("theme") === "true" ) {
         CSSvariable.style.setProperty("--color", "#fff");
         CSSvariable.style.setProperty("--background", "var(--dark_background)");
       } else {
@@ -12,9 +12,20 @@ function Global_Context(props) {
         CSSvariable.style.setProperty("--background", "var(--light_background)");
       }
     }
-    const handleTheme = () => {setTheme(prev => !prev); CssChangeTheme()}; 
+    useEffect(() => {
+      CssChangeTheme(); 
+    }, [isDark]); 
+    const handleTheme = () => {
+      try{
+        setTheme(prev => { 
+          return !prev; 
+        }); 
+        window.localStorage.setItem("theme", isDark); 
+      }catch(error){
+        console.log(error); 
+      }
+    }; 
     const OBJCONTEXT = {
-      isDark, 
       handleTheme, 
     }
   return (
