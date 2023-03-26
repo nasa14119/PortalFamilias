@@ -66,9 +66,9 @@ function Home() {
             <a href="#">Cambiar la contraseña</a>
             <a href="#">Actulizar los datos personales</a>
             <Toggle style="HomeToggle"/>
-            <a href="/PortalFamilias_Redisen-o/login" className="salir">
+            <Link to="/PortalFamilias_Redisen-o/login" className="salir">
               <i className="fa-solid fa-arrow-right-from-bracket"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </header>
