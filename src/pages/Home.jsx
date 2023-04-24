@@ -8,31 +8,22 @@ import Logo from "../../public/Prepa_Ibero.svg"
 import {Link} from "react-router-dom"
 import "./main.css";
 function Home() {
-  const [data_open, setData] = useState(true);
-  const [Menu, setMenu] = useState();
+  const [data_open, setData] = useState(false);
   const more_info = useRef(Array(2)); 
   const calendar_ref = useRef(); 
-  const [calendar_conteiner_state, setCalendarState] = useState()
   const [calendar, open_calendar] = useState(false)
   const Toggle = useTheme()
-  const handleClick = () => {
-    more_info.current[1].style.display = "block"
+  const handleClick = (e) => {
+    if(e.target === more_info.current[0]){
+      return
+    }
     if (data_open) {
-        setMenu({animation:"fade-in-more-info 500ms forwards"});
-      } else {
-        setMenu({animation:"fade-out-more-info 500ms forwards"});
-        more_info.current[0].addEventListener("animationend",()=>more_info.current[1].style.display = "none", {once: true})
-      }
-      setData((prev) => !prev);
+      more_info.current[0].addEventListener("animationend",()=> more_info.current[1].style.display = "none", {once: true})
+    } 
+    setData((prev) => !prev);
   };
   const handleClickCalendar = () => {
-    setCalendarState({backgroundColor:"green"})
-    if (calendar) {
-        setCalendarState({animation:"fade-out-calendar 500ms forwards"})
-    } else {
-        setCalendarState({animation:"fade-in-calendar 500ms forwards"})
-      }
-      calendar_ref.current.addEventListener("animationend", ()=>open_calendar(prev=>!prev), {once:true})
+    open_calendar(prev => !prev); 
   };
   const Calendar = () =>{
       return (
@@ -53,10 +44,11 @@ function Home() {
           className="more_info_conteiner"
           onClick={handleClick}
           ref={(ele) => (more_info.current[1] = ele)}
-        >
+          style={{display : `${data_open && "block"}`}}
+          >
           <div
             className="more_info"
-            style={Menu}
+            style={data_open ? {animation:"fade-in-more-info 500ms forwards"}:{animation:"fade-out-more-info 500ms forwards"}}
             ref={(ele) => (more_info.current[0] = ele)}
           >
             <span className="info">
@@ -211,15 +203,15 @@ function Home() {
         </div>
       </main>
       <section className="pdf_caldendario_sec">
-        <div className="open_calendar" onClick={handleClickCalendar}>
+        <div className="open_calendar" onClick={()=> open_calendar(prev => !prev)}>
           <h3>
             {calendar ? <i className="fa-solid fa-chevron-down"></i>: <i className="fa-solid fa-chevron-right"></i>}
             &nbsp;Eventos importantes
           </h3>
         </div>
-        <div className="pdf_conteiner" style={calendar_conteiner_state} ref={calendar_ref}>
+        <div className="pdf_conteiner" style={calendar ? {animation:"fade-in-calendar 500ms forwards"}:{animation:"fade-out-calendar 500ms forwards"} } ref={calendar_ref}>
           <div className="pdf_caldanrio_pdfViewer" >
-            { calendar && <Calendar/>}
+            <Calendar/>
           </div>
         </div>
       </section>
