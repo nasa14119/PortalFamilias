@@ -26,7 +26,6 @@ function PdfViewer({fileUrl}) {
         RotateForwardMenuItem:()=><></>,
         Rotate:()=><></>,
         SwitchScrollModeMenuItem:()=><></>,
-        SwitchThemeMenuItem:()=><></>,
     });
     const { renderDefaultToolbar, Toolbar } = toolbarPluginInstance;
     const defaultLayoutPluginInstance = defaultLayoutPlugin({
