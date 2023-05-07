@@ -16,41 +16,41 @@ import {
 } from "react-router-dom";
 const router = createBrowserRouter([
   {
-    path: "PortalFamilias_Redisen-o",
+    path: "/",
     element: <Home />,
   },
   {
-    path:"PortalFamilias_Redisen-o/calificaciones",
+    path:"/calificaciones",
     element:<Calificaciones/>,
     children:[
       {
-        path:"/PortalFamilias_Redisen-o/calificaciones/400",
+        path:"/calificaciones/400",
         element:<TablaNotas what="400"/>
       },
       {
-        path:"/PortalFamilias_Redisen-o/calificaciones/500",
+        path:"/calificaciones/500",
         element:<TablaNotas what="500"/>
       },
       {
-        path:"/PortalFamilias_Redisen-o/calificaciones/600",
+        path:"/calificaciones/600",
         element:<TablaNotas what="600"/>
       }
     ]
   },
   {
-    path:"PortalFamilias_Redisen-o/reglamento", 
+    path:"/reglamento", 
     element:<Reglamento/>
   },
   {
-    path:"PortalFamilias_Redisen-o/horario", 
+    path:"/horario", 
     element:<Horario/>
   },
   {
-    path:"PortalFamilias_Redisen-o/pago", 
+    path:"/pago", 
     element:<Pago/>
   },
   {
-    path:"PortalFamilias_Redisen-o/login", 
+    path:"/login", 
     element:<Login/>
   },
 ]);
