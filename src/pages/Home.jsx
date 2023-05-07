@@ -58,7 +58,7 @@ function Home() {
             <a href="#">Cambiar la contraseña</a>
             <a href="#">Actulizar los datos personales</a>
             <Toggle style="HomeToggle"/>
-            <Link to="/PortalFamilias_Redisen-o/login" className="salir">
+            <Link to="/login" className="salir">
               <i className="fa-solid fa-arrow-right-from-bracket"></i>
             </Link>
           </div>
@@ -69,19 +69,19 @@ function Home() {
           <div className="other_options">
               <ul>
                 <li>
-                  <Link to="/PortalFamilias_Redisen-o/calificaciones">
+                  <Link to="/calificaciones">
                     <i className="fas fa-clipboard"></i>
                     <span>Calificaciones</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/PortalFamilias_Redisen-o/reglamento">
+                  <Link to="/reglamento">
                     <i className="fa-solid fa-book"></i>
                     <span>Reglamento</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/PortalFamilias_Redisen-o/horario">
+                  <Link to="/horario">
                     <i className="fa-solid fa-calendar-days"></i>
                     <span>Horario</span>
                   </Link>
@@ -116,7 +116,7 @@ function Home() {
               </a>
             </div>
             <div>
-              <Link to="/PortalFamilias_Redisen-o/pago">
+              <Link to="/pago">
                 Pago de colegiaturas&nbsp;
                 <i className="fa-solid fa-angles-right"></i>
               </Link>
