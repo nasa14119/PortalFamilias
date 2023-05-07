@@ -9,6 +9,7 @@ import Reglamento from './pages/Reglamento'
 import Horario from "./pages/horario"
 import Pago from "./pages/Pago"
 import Login from "./pages/Login"
+import Error from './Components/Error'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+    errorElement: <Error/> 
   },
   {
     path:"/calificaciones",
@@ -53,6 +55,10 @@ const router = createBrowserRouter([
     path:"/login", 
     element:<Login/>
   },
+  {
+    path:"errorElement", 
+    element:<Error/>
+  },
 ]);
 const CssChangeTheme = () => {
   const CSSvariable = document.documentElement;
@@ -67,7 +73,7 @@ const CssChangeTheme = () => {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Global_Context>
-      <RouterProvider router={router}/> 
+      <RouterProvider router={router} fallbackElement={Error} /> 
     </Global_Context>
   </React.StrictMode>
 )

@@ -27,6 +27,7 @@ function Global_Context(props) {
     }; 
     const OBJCONTEXT = {
       handleTheme, 
+      isDark
     }
   return (
     <TheContext.Provider value={OBJCONTEXT}>{props.children}</TheContext.Provider>

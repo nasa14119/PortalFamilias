@@ -37,10 +37,7 @@ a:hover{
     max-width: 100vw;
     overflow-x:hidden; 
     padding-bottom: 2rem;
-}
-body > *{
-    transition:all 250ms ease-in; 
-    transition-delay: 0;
+    transition:background 250ms ease-out; 
 }
 .ToggleDefault{
     position: static; 
