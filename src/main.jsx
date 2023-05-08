@@ -6,7 +6,7 @@ import Calificaciones from "./pages/Calificaciones"
 import TablaNotas from "./Components/TablaNotas"
 import Global_Context from "./Global_Context"
 import Reglamento from './pages/Reglamento'
-import Horario from "./pages/horario"
+import {Horario} from "./pages/Horario"
 import Pago from "./pages/Pago"
 import Login from "./pages/Login"
 import Error from './Components/Error'

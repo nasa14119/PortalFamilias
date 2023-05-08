@@ -119,7 +119,6 @@
     align-items: center;
     overflow: hidden;
     grid-column: 1;
-    border-radius:1rem; 
 }
 .inicio-horario{
     font-weight: 100;
@@ -156,28 +155,6 @@
     font-size: 18px;
 }
 /* Phone view*/
-.phone-table-horario{
-    display: none;
-}
-@media screen and (max-width:500px){
-    .error_dia{
-        height: 100%;
-        align-items: center;
-    }
-    .inicio-horario{
-        font-size: 10px;
-    }
-    .table-horario{
-        display: none; 
-    }
-    .phone-table-horario{
-        position: relative;
-        display: block;
-        width: 90%;
-        margin-inline: auto;
-        height: 100vh;
-    }
-}
 @keyframes go-left {
     from {
         transform: translateX(-125%);
@@ -225,35 +202,27 @@
 @keyframes fade-in {
     from{opacity: 0;} to{opacity: 1;}
 }
-.dia-phone{
-    width: 100%;
-    height: 100vh;
-    position:absolute; 
-    column-gap: 2%;
-    grid-template-columns: 20% 1fr;
-    grid-template-rows: 10% 1fr;
+.phone-table-horario{
+    display: none;
 }
-.dia-phone > ul{
-    list-style-type: none;
-}
-.dia-phone  li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.dia-phone .main-phone{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(96, 5px);
-}
-.dia-phone .horas-phone{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(12, 60px);
-}
-.dia-phone .horas-phone li{
-    border: 1px solid #333; 
+@media screen and (max-width:500px){
+    .error_dia{
+        height: 100%;
+        align-items: center;
+    }
+    .inicio-horario{
+        font-size: 10px;
+    }
+    .table-horario{
+        display: none; 
+    }
+    .phone-table-horario{
+        position: relative;
+        display: block;
+        width: 90%;
+        margin-inline: auto;
+        height: 100vh;
+    }
 }
 .dia-phone[data-in-display="true"]{
     animation: fade-in 250ms forwards;
@@ -299,26 +268,42 @@ button[data-notmove="false"]{
     visibility: visible;
 }
 /* dia-phone children */
-.horas-phone{
-    grid-column: 1;
-    grid-row: 2;
+
+.horas-phone li{
+    border: 1px solid #333; 
+    border-bottom: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.main-phone{
-    grid-column: 2;
-    grid-row: 2;
+.horas-phone li:last-child{
+    border-bottom: 1px solid #333; 
 }
 .header-phone{
     display: grid;
     place-items: center;
     text-transform: capitalize;
     width: 100%;
-    height: 90%;
     border: solid 1px #333;
+    border-left: transparent;
     grid-column: 2;
     grid-row: 1;
 }
+.row-phone{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
+.container-phone{
+    gap: 10px;
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: 20% 100%;
+}
 .controls {
-    height: 90%;
+    height: 100%;
     border: 1px solid #333;
     grid-column: 1;
     grid-row: 1;
@@ -329,4 +314,33 @@ button[data-notmove="false"]{
     width: 90%;
     background-color: transparent;
     border:none; 
+} 
+.dia-phone{
+    width: 100%;
+    height: 100vh;
+    position:absolute; 
+    column-gap: 2%;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 10% 1fr;
+}
+.horas-phone{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 96px);
+}
+.main-phone{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(0, 0, 0, 0.627); 
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(96, 8px);
+}
+.main-phone li{
+    border-radius:1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
