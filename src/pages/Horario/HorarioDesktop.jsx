@@ -1,14 +1,6 @@
 import React from "react";
 import { ShowHorario } from "./ShowHorario";
 
-const ErrorInDay = () => {
-    return (
-        <div className="calificacion_err error_dia">
-        <i className="fa-regular fa-clock"></i>
-        <span>Error al cargar el dia</span>
-      </div>
-    );
-}
 export const HorarioDesktop = ({ data }) => {
   return(
   <div className="table-horario">

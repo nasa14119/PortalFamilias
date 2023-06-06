@@ -106,6 +106,7 @@
     grid-template-rows: repeat(96, 5px);
 }
 .dia li{
+    border-radius: 1rem;
     color: #fff; 
     font-family: 'Libre Franklin', sans-serif;
     font-weight: 700;

@@ -1,33 +1,31 @@
 import React, {createContext, useEffect, useState} from 'react'
 export const TheContext = createContext(null); 
 function Global_Context(props) {
-    const [isDark, setTheme] = useState(window.localStorage.getItem("theme") === "true");
+    const [theme, setTheme] = useState(() => {
+      const localTheme = window.localStorage.getItem("theme") 
+      return localTheme ? localTheme : "light"; 
+    }
+    );
     const CssChangeTheme = () => {
       const CSSvariable = document.documentElement;
-      if (window.localStorage.getItem("theme") === "true" ) {
+      if (theme === "dark") {
         CSSvariable.style.setProperty("--color", "#fff");
         CSSvariable.style.setProperty("--background", "var(--dark_background)");
       } else {
         CSSvariable.style.setProperty("--color", "#000");
         CSSvariable.style.setProperty("--background", "var(--light_background)");
       }
+      window.localStorage.setItem("theme", theme); 
     }
-    useEffect(() => {
-      CssChangeTheme(); 
-    }, [isDark]); 
+    useEffect(CssChangeTheme, [theme])
     const handleTheme = () => {
-      try{
         setTheme(prev => { 
-          return !prev; 
+          return prev === "dark" ? "light" : "dark"; 
         }); 
-        window.localStorage.setItem("theme", isDark); 
-      }catch(error){
-        console.log(error); 
-      }
     }; 
     const OBJCONTEXT = {
       handleTheme, 
-      isDark
+      theme
     }
   return (
     <TheContext.Provider value={OBJCONTEXT}>{props.children}</TheContext.Provider>

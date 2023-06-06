@@ -9,10 +9,10 @@
     --ibero:#E63946;  
     --dark_blue: #1D3557; 
     --extra_blue:#A8DADC; 
-    --background: #F1FAEE; 
+    /* --background: #F1FAEE;  */
     --dark_background:#202020 ; 
     --light_background: #F1FAEE ;
-    --color: #000; 
+    /* --color: #000;  */
 }
 h1, h2, h3 {
     transition: all 250ms 0 ease-in; 
