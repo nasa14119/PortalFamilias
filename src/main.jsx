@@ -56,7 +56,11 @@ const router = createBrowserRouter([
     element:<Login/>
   },
   {
-    path:"*", 
+    path:"errorElement", 
+    element:<Error/>
+  },
+  {
+    path:"/*/*", 
     element:<Error/>
   },
 ]);
