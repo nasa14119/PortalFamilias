@@ -1,5 +1,4 @@
-import React, { Fragment, useState, useRef, useContext} from "react";
-import {TheContext}from "../Global_Context";
+import React, { Fragment, useState, useRef} from "react";
 import useTheme from "../Components/useTheme";
 import {Worker} from "@react-pdf-viewer/core"
 import PdfViewer from "../Components/PdfViewer"

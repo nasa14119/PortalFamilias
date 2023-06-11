@@ -1,6 +1,7 @@
 import { ShowHorario } from './ShowHorario';
 import React, { useState } from 'react'
-export const HorarioPhone = ({data}) => {
+import { useColor } from './useColor';
+export const HorarioPhone = () => {
   const [index, setIndex] = useState(0)
   const handleRightClick = () => {
     setIndex(prev => (prev+ 1) >= 5 ? 0 : prev + 1); 
@@ -29,6 +30,10 @@ export const HorarioPhone = ({data}) => {
     )
   }
   let dia = ["lunes", "martes", "miercoles", "jueves", "vienes"]; 
+  const [done, data] = useColor(); 
+  if(!done){
+    return <h1 style={{display: "flex", justifyContent:"center"}}>Loading...</h1>
+  }
   return (
     <div className='container-phone'>
       <div className='row-phone'>

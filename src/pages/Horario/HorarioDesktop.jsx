@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ShowHorario } from "./ShowHorario";
+import { useColor } from "./useColor";
 
-export const HorarioDesktop = ({ data }) => {
+export const HorarioDesktop = () => {
+  const [done, data] = useColor(); 
+  if(!done){
+    return <h1 style={{display: "flex", justifyContent:"center"}}>Loading...</h1>
+  }
   return(
   <div className="table-horario">
     <div className="thead">
