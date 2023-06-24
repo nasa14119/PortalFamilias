@@ -51,8 +51,8 @@ function PayForm() {
   const HaveAccesAnimation = () => {
     return (
       <div className="haveAcces">
-          <h2>Thank You!</h2>
-          <p>We've added your card</p>
+          <h2>Muchas Gracias</h2>
+          <p>hemos recibido el pago</p>
           <button onClick={()=> LevelAcces(false)}>Continue</button>
       </div>
     )

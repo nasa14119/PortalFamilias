@@ -6,18 +6,17 @@ function Global_Context(props) {
       return localTheme ? localTheme : "light"; 
     }
     );
-    const CssChangeTheme = () => {
-      const CSSvariable = document.documentElement;
+    useEffect(()=>{
+      const body = document.body;
       if (theme === "dark") {
-        CSSvariable.style.setProperty("--color", "#fff");
-        CSSvariable.style.setProperty("--background", "var(--dark_background)");
+        body.classList.add("dark-theme");
+        body.classList.remove("light-theme");
       } else {
-        CSSvariable.style.setProperty("--color", "#000");
-        CSSvariable.style.setProperty("--background", "var(--light_background)");
+        body.classList.remove("dark-theme");
+        body.classList.add("light-theme");
       }
       window.localStorage.setItem("theme", theme); 
-    }
-    useEffect(CssChangeTheme, [theme])
+    }, [theme]); 
     const handleTheme = () => {
         setTheme(prev => { 
           return prev === "dark" ? "light" : "dark"; 

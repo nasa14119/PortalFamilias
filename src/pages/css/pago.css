@@ -43,6 +43,7 @@
 .row-2{
     margin: 0;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,14 +69,19 @@
     }
 /* ignore this */
 .haveAcces{
-    width: min(400px, 100%);
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+.haveAcces > *{
+    margin-block: 5px;
+}
 .haveAcces button{
     color:#fff;  
-    background-color:hsl(278, 68%, 11%);
+    background-color:var(--ibero-dark);
     border-radius: 20px;
     border:none; 
     padding: 0.5rem 3rem;

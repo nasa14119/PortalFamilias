@@ -96,13 +96,13 @@ function Home() {
               NOTIFICACIONES
             </span>
             <div>
-              <a href="#">
+              <a href="/evaluacion/tutores">
                 Evaluacion de tutores&nbsp;
                 <i className="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div>
-              <a href="#">
+              <a href="/evaluacion/maestros">
                 La evaluacion de profesores ya esta aquí&nbsp;
                 <i className="fa-solid fa-angles-right"></i>
               </a>
