@@ -1,0 +1,21 @@
+ul.conteiner-stars{
+    --star-color: #ffca09; 
+    display: flex;
+    column-gap: 5px;
+    list-style-type:none;
+    justify-content: flex-end;
+    padding-inline: 0.5rem;
+}
+.conteiner-stars li:hover{
+    transform: scale(1.2);
+}
+.conteiner-stars li i{
+    color: var(--star-color);
+}
+@media (min-width:769px){
+    .conteiner-question{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 1rem;
+    }
+}

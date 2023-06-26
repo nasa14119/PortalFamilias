@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <img src="/Prepa_Ibero.svg" alt="Brnad_logo" />
+        <img src="/Prepa_Ibero.svg" alt="Brnad_logo" height="100%" width="100%"/>
       </Link>
       <h2>
         <Link to="/">Portal<br/>Familias</Link>
