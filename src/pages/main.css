@@ -143,7 +143,7 @@
         margin: auto;
         padding-block: 1rem;
         width:90%;
-        border: #457B9D solid 2.5px; 
+        border: var(--dark_blue) solid 2.5px; 
         border-radius: 1rem;
         text-align: center;
     }
@@ -158,7 +158,7 @@
     }
  /* Notificaciones home */
  .notification_conteiner{
-    border: #1D3557 5px solid;
+    border: var(--ibero-dark) 5px solid;
     height: 100%; 
     box-sizing: border-box;
     border-radius: 1rem;
@@ -219,7 +219,8 @@
     grid-template-columns: repeat(2, 50%);
 }
 .news_conteiner{
-    border: 1px solid #c2c9d6; 
+    border-radius: 20px;
+    border: 1px solid var(--ibero-dark); 
     color:#000;
     width: 90%; 
     margin: 7% auto; 
@@ -248,7 +249,9 @@
 .news_conteiner > div:last-of-type h4{
     padding: 5px 5% 0; 
     font-size:15px;
-    color: #A8DADC; 
+    color: #fff; 
+    font-family: var(--p);
+    font-weight: 800;
 }
 .news_conteiner > div:last-of-type p{
     line-height: 9px;
@@ -334,15 +337,16 @@
         background: var(--ibero);
         box-shadow: -18px 14px 5px 0px rgb(207, 203, 203);
     }
-    .OnlyCompHome > *:nth-child(1){
-        color:var(--extra_blue);
-        font-family: 'Marcellus SC', serif;
+    .OnlyCompHome > h3{
+        color:#fff;
+        font-family: var(--title);
         text-align:center; 
         width: 90%;
         font-size: 20px;
     }
-    .OnlyCompHome > img{
+    .OnlyCompHome img{
         color: none; 
+        border-radius: 20px;
     }
 }
 /* Tablets */

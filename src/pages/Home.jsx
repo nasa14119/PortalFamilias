@@ -126,7 +126,7 @@ function Home() {
           </div>
         </div>
         <div className="OnlyCompHome" style={{ boxShadow: window.localStorage.getItem("theme")&& "none" }}>
-          <span>Noticias</span>
+          <h3>Noticias</h3>
           <div className="OnlyCompHome_news_conteiner">
             <div className="news_conteiner">
               <div>
