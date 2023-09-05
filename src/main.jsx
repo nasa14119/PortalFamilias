@@ -2,7 +2,7 @@ import React, {useEffect} from 'react'
 import ReactDOM from 'react-dom/client'
 import "./pages/index.css"
 import Home from "./pages/Home"
-import Calificaciones from "./pages/Calificaciones"
+import {Calificaciones} from "./pages/Calificaciones"
 import TablaNotas from "./Components/TablaNotas"
 import Global_Context from "./Global_Context"
 import Reglamento from './pages/Reglamento'

@@ -1,8 +1,8 @@
-import React ,{Fragment}from 'react'
+import React ,{Fragment} from 'react'
 import {Outlet, Link, NavLink} from "react-router-dom"
-import Header from '../Components/Header';
-import "./css/calificaciones.css"
-function Calificaciones() {
+import Header from "../../Components/Header"
+import "./styles.css"
+export function Calificaciones() {
   let active = {
     color: "var(--extra_blue)", 
     border: "none"
@@ -27,5 +27,3 @@ function Calificaciones() {
     </Fragment>
   );
 }
-
-export default Calificaciones
