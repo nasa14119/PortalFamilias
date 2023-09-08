@@ -5,7 +5,7 @@ import PdfViewer from "../Components/PdfViewer"
 import Calendario from "/Calendario Prepa 2022.pdf"
 import {Link} from "react-router-dom"
 import "./main.css";
-function Home() {
+export function Home() {
   const [data_open, setData] = useState(false);
   const more_info = useRef(Array(2)); 
   const calendar_ref = useRef(); 
@@ -96,13 +96,13 @@ function Home() {
               NOTIFICACIONES
             </span>
             <div>
-              <a href="/evaluacion/tutores">
+              <a href="/evaluacion/tutor">
                 Evaluacion de tutores&nbsp;
                 <i className="fa-solid fa-angles-right"></i>
               </a>
             </div>
             <div>
-              <a href="/evaluacion/maestros">
+              <a href="/evaluacion/profesor">
                 La evaluacion de profesores ya esta aquí&nbsp;
                 <i className="fa-solid fa-angles-right"></i>
               </a>
@@ -217,4 +217,3 @@ function Home() {
   );
 }
 
-export default Home;

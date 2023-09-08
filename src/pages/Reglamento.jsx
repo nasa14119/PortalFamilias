@@ -3,7 +3,7 @@ import "./css/reglamento.css";
 import Header from "../Components/Header";
 import { Worker } from "@react-pdf-viewer/core";
 import PdfViewer from "../Components/PdfViewer";
-function Reglamento() {
+export function Reglamento() {
   const BASICURL = "Data_reglamento/";
   const obj = {
     "00": {
@@ -174,5 +174,3 @@ function Reglamento() {
     </Fragment>
   );
 }
-
-export default Reglamento;

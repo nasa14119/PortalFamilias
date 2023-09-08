@@ -2,6 +2,7 @@ import React ,{Fragment} from 'react'
 import {Outlet, Link, NavLink} from "react-router-dom"
 import Header from "../../Components/Header"
 import "./styles.css"
+import { TablaNotas } from './TablaNotas'
 export function Calificaciones() {
   let active = {
     color: "var(--extra_blue)", 
@@ -27,3 +28,6 @@ export function Calificaciones() {
     </Fragment>
   );
 }
+export const Element400 = () => <TablaNotas what="400"/>;
+export const Element500 = () => <TablaNotas what="500"/>;
+export const Element600 = () => <TablaNotas what="600"/>;

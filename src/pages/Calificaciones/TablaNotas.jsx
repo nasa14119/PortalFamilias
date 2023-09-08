@@ -1,5 +1,5 @@
 import React,{Fragment, useEffect, useRef} from 'react'
-import "../pages/css/TablaNotas.css"
+import "./TablaNotas.css"
 const data = {
   400: [
     {
@@ -100,7 +100,7 @@ const MakeTable = (year, semestre) => {
     </table>
   )
 }
-function TablaNotas({what}) {
+export function TablaNotas({what}) {
   const Tabla_Calis= useRef()
   useEffect(() => {
     Tabla_Calis.current.style.animation = "none"
@@ -137,5 +137,3 @@ function TablaNotas({what}) {
     </div>
   );
 }
-
-export default TablaNotas

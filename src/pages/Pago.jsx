@@ -174,7 +174,7 @@ const Colegiatura = () => {
     </div>
   )
 }
-function Pago() {
+export function Pago() {
     const semiRoutes = [
         <Colegiatura/>,
         <AbonoMonedero/>, 
@@ -227,5 +227,3 @@ function Pago() {
     </Fragment>
   );
 }
-
-export default Pago

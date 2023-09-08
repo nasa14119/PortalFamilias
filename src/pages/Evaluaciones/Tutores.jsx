@@ -2,7 +2,7 @@ import React from 'react'
 import Header from "../../Components/Header"
 import MainEvaluacion from "./components/MainEvaluacion"
 import SendButton from './components/SendButton';
-function Tutores() {
+export function Tutores() {
   return (
     <>
       <Header />
@@ -36,5 +36,3 @@ function Tutores() {
     </>
   );
 }
-
-export default Tutores

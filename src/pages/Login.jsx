@@ -1,7 +1,7 @@
 import React from 'react'
 import "./css/login.css"
 import { useNavigate } from 'react-router-dom'
-function Login() {
+export function Login() {
     const navigate = useNavigate()
   return (
     <div className='login'>
@@ -25,5 +25,3 @@ function Login() {
     </div>
   )
 }
-
-export default Login
