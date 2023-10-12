@@ -1,5 +1,4 @@
 import React, { Fragment, useState, useRef } from "react";
-import useTheme from "../../Components/useTheme";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { NewsPanel } from "./NewsPanel";
