@@ -6,21 +6,6 @@ import {Notification} from "./Notifications"
 import { Calendar } from "./Calendar";
 import { useSlider } from "./Slider";
 export function Home() {
-  const [data_open, setData] = useState(false);
-  const more_info = useRef(Array(2));
-  const handleClick = (e) => {
-    if (e.target === more_info.current[0]) {
-      return;
-    }
-    if (data_open) {
-      more_info.current[0].addEventListener(
-        "animationend",
-        () => (more_info.current[1].style.display = "none"),
-        { once: true }
-      );
-    }
-    setData((prev) => !prev);
-  };
   const [Slider, handleSlider] = useSlider(); 
   return (
     <Fragment>
