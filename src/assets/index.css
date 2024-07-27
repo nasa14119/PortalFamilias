@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Chonburi&family=Maitree:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
  *{margin:0; padding:0;}
 .dark-theme{
     --background: #202020; 
@@ -14,7 +14,7 @@
 :root {
     --title: 'Bungee', cursive; 
     --sub:600;
-    --p:'Ysabeau Office', sans-serif;
+    --p:'Sarabun', sans-serif;
     --ibero:#E63946;  
     --ibero-dark:#a12731; 
     --dark_blue: #701b22; 
