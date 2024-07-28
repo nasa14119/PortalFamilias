@@ -26,12 +26,14 @@ const imgs = [
 export function NewsCarrusel({delay}) {
   const start = 5; 
   const [index, setIndex] = useState(start - 1); 
+  const [prevSrc, setPrev] = useState(""); 
   const [loading, setLoad] = useState(false); 
   useEffect(()=>{
     const changeNews = setTimeout(handelClickRight, delay * 1000); 
     return () => clearTimeout(changeNews); 
   },[loading])
   const changeImage = () =>{
+    setPrev(imgs[index].src)
     setLoad(prev => true)
     setTimeout(() => setLoad(prev => false), 20)
   }
@@ -59,9 +61,10 @@ export function NewsCarrusel({delay}) {
         </p>
         <div className="img">
           {!loading && <Img src={imgs[index].src}/> }
+          {!prevSrc ? null : <img src={prevSrc} className="img-prev"/>}
         </div>
       </main>
-      <DotsCount index={index} start={start} func={handleClickDot} />
+      <DotsCount index={index} start={imgs.length} func={handleClickDot} />
     </div>
   );
 }
@@ -69,11 +72,11 @@ function Img({src}){
   return (
     <img
       src={src}
+      className="img-noticia"
       alt="img-noticia"
       onLoad={(e) => {
         e.target.classList.add("show");
       }}
-      loading="lazy"
     />
   );
 }

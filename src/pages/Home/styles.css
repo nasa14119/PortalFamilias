@@ -326,21 +326,32 @@
 @keyframes img-carrusel{
     from{
         opacity: 0;
-        transform: translateX(10%);
+        transform: translateX(50%);
     }
-    75%{
+    25%{
+        opacity: 1;
+    }
+    to{
         transform: translateX(0);
     }
 }
-.img img{
-    position: relative;
-    z-index: -1;
-    visibility: hidden;
+.img .img-prev{
+    position: absolute;
+    inset: 0;
+    z-index: -20;
     height: 100%;
     object-fit: cover;
 }
+.img .img-noticia{
+    position: relative;
+    z-index: -10;
+    height: 100%;
+    object-fit: cover;
+
+}
 .img .show{
     visibility: visible;
+    animation-delay: 1s;
     animation: img-carrusel 750ms forwards;
 }
 .news-carrusel-container > .news-carrusel-controls{
