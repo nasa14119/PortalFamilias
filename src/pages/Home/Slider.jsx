@@ -22,7 +22,9 @@ export function useSlider(){
   const Element = () => (
     <Fragment>
       <main className="slider-container" data-state={state} onAnimationEnd={handleAnimation}>
-        <div className="slider-background" style={{backgroundImage:`url("${ImgBackground}")`}}></div>
+        <div className="slider-background">
+          <img src={ImgBackground} alt="" />
+        </div>
         <span className='slider-cross' onClick={handleClick}>
           <Toggle style='slider-theme-toggle'/>
           <i className="fa-solid fa-xmark"></i>
