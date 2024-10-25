@@ -3,6 +3,7 @@ import Header from "../../Components/Header";
 import { Worker } from "@react-pdf-viewer/core";
 import FILES from "./FILES.json";
 import PdfViewer from "../../Components/PdfViewer";
+import "./styles.css";
 export function Reglamento() {
   const TotalFiles = Object.keys(FILES).length;
   const [menuReglamento, openMenu] = useState(false);

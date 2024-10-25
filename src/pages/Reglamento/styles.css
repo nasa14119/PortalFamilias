@@ -1,0 +1,245 @@
+@media (min-width: 769px) {
+  /* Selection Styles */
+  .main-reglamento {
+    padding-inline: 10vw;
+  }
+  .reglamento_conteiner {
+    position: relative;
+  }
+  @keyframes select_Animation {
+    0% {
+      visibility: visible;
+      opacity: 1;
+      height: 0;
+    }
+
+    100% {
+      height: 70vh;
+      visibility: visible;
+    }
+  }
+
+  @keyframes select_Animation_hide {
+    0% {
+      visibility: visible;
+      height: 70vh;
+      opacity: 1;
+    }
+
+    99% {
+      visibility: visible;
+    }
+
+    100% {
+      padding: 0;
+      visibility: hidden;
+      opacity: 1;
+      height: 0;
+    }
+  }
+
+  @keyframes select_Animation_content {
+    0% {
+      visibility: visible;
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  @keyframes select_Animation_content_hide {
+    0% {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    88% {
+      opacity: 0;
+    }
+
+    90% {
+      visibility: visible;
+    }
+
+    100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  .reglamento_conteiner {
+    position: relative;
+    z-index: 50;
+    font-family: var(--title);
+    font-size: 1.2em;
+  }
+
+  .reglamento_conteiner span {
+    background-color: #b82d38;
+    display: block;
+    padding-block: 1rem;
+    margin-block: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+  }
+
+  .reglamento_conteiner:hover + .selectIndex *,
+  .selectIndex:hover * {
+    opacity: 0;
+    animation: select_Animation_content 250ms forwards;
+    animation-delay: 750ms;
+  }
+
+  .reglamento_conteiner:not(:hover) + .selectIndex.selectIndex:not(:hover) * {
+    animation: select_Animation_content_hide 50ms forwards;
+    animation-delay: 0ms;
+  }
+
+  .reglamento_conteiner:hover + .selectIndex,
+  .selectIndex:hover {
+    animation: select_Animation 750ms forwards;
+  }
+
+  .reglamento_conteiner:not(:hover) + .selectIndex.selectIndex:not(:hover) {
+    animation: select_Animation_hide 750ms forwards;
+    animation-delay: 200ms;
+  }
+
+  .reglamento_conteiner i {
+    display: none;
+  }
+
+  .selectIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    align-items: center;
+    height: 70vh;
+    position: relative;
+    top: -1.85rem;
+    background-color: var(--ibero);
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .selectIndex div:hover {
+    background-color: #b82d38;
+    cursor: pointer;
+  }
+
+  .selectIndex > * {
+    padding: 5px;
+  }
+
+  .selectIndexPhone {
+    display: none;
+  }
+}
+.selectIndexPhone {
+  max-width: 500px;
+}
+.selectIndexPhone header {
+  padding-block: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selectIndexPhone header > span {
+  background-color: #b82d38;
+  width: 100%;
+  padding-block: 5px;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.selectIndexPhone header > i {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.selectIndexPhone main {
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.selectIndexPhone main > * {
+  font-size: 15px;
+}
+/* Phone */
+@media screen and (max-width: 769px) {
+  .Pdf_viewer {
+    width: 95%;
+    height: 100vh;
+  }
+
+  .toolbar_container * {
+    font-size: 10px;
+  }
+
+  .main-reglamento {
+    padding-inline: 5%;
+  }
+
+  .selectIndex {
+    display: none;
+  }
+
+  .reglamento_conteiner {
+    padding: 20px 0.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  @keyframes fade-in-left {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-out-right {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .selectIndexPhone {
+    transform: translate(-100%);
+    padding: 0 10%;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    overflow-y: scroll;
+    color: #fff;
+    display: grid;
+    grid-template-rows: fit-content 1fr;
+    background-color: var(--ibero);
+  }
+
+  .selectIndexPhone[data-show-menu="true"] {
+    animation: fade-in-left 750ms forwards;
+  }
+
+  .selectIndexPhone[data-show-menu="false"] {
+    animation: fade-out-right 750ms forwards;
+  }
+}
