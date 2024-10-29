@@ -1,45 +1,19 @@
-import React, { Fragment } from "react";
-import { Viewer } from "@react-pdf-viewer/core";
-import "./styles.css";
+/* eslint-disable react/prop-types */
+import { Worker } from "@react-pdf-viewer/core";
+// Styles from plugins
 import "@react-pdf-viewer/core/lib/styles/index.css";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
-import { toolbarPlugin } from "@react-pdf-viewer/toolbar";
-import "@react-pdf-viewer/toolbar/lib/styles/index.css";
-function PdfViewer({ fileUrl }) {
-  const CustomTolbar = () => {
-    return (
-      <div className="toolbar_container">
-        <Toolbar>{renderDefaultToolbar(transform)}</Toolbar>
-      </div>
-    );
-  };
-  const toolbarPluginInstance = toolbarPlugin();
-  const transform = (ToolbarSlot) => ({
-    ...ToolbarSlot,
-    ShowSearchPopover: () => <></>,
-    SwitchTheme: () => <></>,
-    SwitchThemeMenuItem: () => <></>,
-    Open: () => <></>,
-    OpenMenuItem: () => <></>,
-    RotateBackwardMenuItem: () => <></>,
-    RotateForwardMenuItem: () => <></>,
-    Rotate: () => <></>,
-    SwitchScrollModeMenuItem: () => <></>,
-  });
-  const { renderDefaultToolbar, Toolbar } = toolbarPluginInstance;
-  const defaultLayoutPluginInstance = defaultLayoutPlugin({
-    sidebarTabs: (defaultTabs) => [defaultTabs[0]],
-    renderToolbar: CustomTolbar,
-  });
+import "@react-pdf-viewer/full-screen/lib/styles/index.css";
+import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
+
+import ViewPdf from "./ViewPdf";
+const WORKER_URL =
+  "https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+export function PdfViewer({ fileUrl, horizontal }) {
   return (
-    <Fragment>
-      <Viewer
-        fileUrl={fileUrl}
-        plugins={[defaultLayoutPluginInstance, toolbarPluginInstance]}
-      />
-    </Fragment>
+    <>
+      <Worker workerUrl={WORKER_URL}>
+        <ViewPdf fileUrl={fileUrl} horizontal={horizontal} />
+      </Worker>
+    </>
   );
 }
-
-export default PdfViewer;

@@ -1,82 +1,81 @@
-import React, {Fragment, useState, useEffect} from 'react'
-import Header from "../Components/Header"
-import Form from "../Components/PayForm"
-import "./css/pago.css"
+import React, { Fragment, useState, useEffect } from "react";
+import Header from "../Components/Header";
+import Form from "../Components/PayForm";
+import "./css/pago.css";
 
 const PagoExtraodinarios = () => {
   return (
-    <div className='AboonoMonedero'>
-      <div className='row-1'>
-      <ul>
-        <li>
-          $ Total<br/>
-          <span className='descrip_recibo'>00,000.00</span>
-        </li>
-        <li>
-          <i className="fa-solid fa-dumbbell"></i>
-          <span className='descrip_recibo' style={{fontSize: "18px"}}>
-            Actividad a pagar<br/>
-            <span className="fecha_recibo">
-            Actividad
+    <div className="AboonoMonedero">
+      <div className="row-1">
+        <ul>
+          <li>
+            $ Total
+            <br />
+            <span className="descrip_recibo">00,000.00</span>
+          </li>
+          <li>
+            <i className="fa-solid fa-dumbbell"></i>
+            <span className="descrip_recibo" style={{ fontSize: "18px" }}>
+              Actividad a pagar
+              <br />
+              <span className="fecha_recibo">Actividad</span>
             </span>
-          </span>
-        </li>
-        <li>
-          <i className="fa-solid fa-circle-exclamation"></i><br/>
-          <span className='descrip_recibo'>
-            Ultimo dia de pago<br/>
-            <span className="fecha_recibo">
-              01/05/23
+          </li>
+          <li>
+            <i className="fa-solid fa-circle-exclamation"></i>
+            <br />
+            <span className="descrip_recibo">
+              Ultimo dia de pago
+              <br />
+              <span className="fecha_recibo">01/05/23</span>
             </span>
-          </span>
-        </li>
-      </ul>
-    </div>
+          </li>
+        </ul>
+      </div>
       <div className="row-2">
         <Form />
       </div>
     </div>
   );
-}
+};
 const PagoServicios = () => {
   return (
-    <div className='Colegiatura'>
-    <div className='row-1'>
-      <ul>
-        <li>
-          $ Total<br/>
-          <span className='descrip_recibo'>00,000.00</span>
-        </li>
-        <li>
-          <i className="fa-solid fa-receipt"></i>
-          <span className='descrip_recibo'>
-            Tramite<br/>
-            <span className="fecha_recibo">
-            Lorem ipsum dolor
+    <div className="Colegiatura">
+      <div className="row-1">
+        <ul>
+          <li>
+            $ Total
+            <br />
+            <span className="descrip_recibo">00,000.00</span>
+          </li>
+          <li>
+            <i className="fa-solid fa-receipt"></i>
+            <span className="descrip_recibo">
+              Tramite
+              <br />
+              <span className="fecha_recibo">Lorem ipsum dolor</span>
             </span>
-          </span>
-        </li>
-        <li>
-          <i className="fa-solid fa-circle-exclamation"></i><br/>
-          <span className='descrip_recibo'>
-            Ultimo dia de pago<br/>
-            <span className="fecha_recibo">
-              01/05/23
+          </li>
+          <li>
+            <i className="fa-solid fa-circle-exclamation"></i>
+            <br />
+            <span className="descrip_recibo">
+              Ultimo dia de pago
+              <br />
+              <span className="fecha_recibo">01/05/23</span>
             </span>
-          </span>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
+      <div className="row-2">
+        <Form />
+      </div>
     </div>
-    <div className='row-2'>
-      <Form/>
-    </div>
-  </div>
-  )
-}
+  );
+};
 const AbonoMonedero = () => {
-  let prevSaldo = 500
-  const [NuevoSaldo, changeSaldo] = useState(0)
-  console.log(Form[1])
+  let prevSaldo = 500;
+  const [NuevoSaldo, changeSaldo] = useState(0);
   return (
     <div className="AboonoMonedero">
       <div className="row-1">
@@ -138,58 +137,59 @@ const AbonoMonedero = () => {
       </div>
     </div>
   );
-}
+};
 const Colegiatura = () => {
   return (
-    <div className='Colegiatura'>
-      <div className='row-1'>
+    <div className="Colegiatura">
+      <div className="row-1">
         <ul>
           <li>
-            $ Total<br/>
-            <span className='descrip_recibo'>00,000.00</span>
+            $ Total
+            <br />
+            <span className="descrip_recibo">00,000.00</span>
           </li>
           <li>
-            <i className="fa-regular fa-calendar"></i><br/>
-            <span className='descrip_recibo'>
-              Colegiatura Otoño<br/>
-              <span className="fecha_recibo">
-              01/01/23
-              </span>
+            <i className="fa-regular fa-calendar"></i>
+            <br />
+            <span className="descrip_recibo">
+              Colegiatura Otoño
+              <br />
+              <span className="fecha_recibo">01/01/23</span>
             </span>
           </li>
           <li>
-            <i className="fa-solid fa-circle-exclamation"></i><br/>
-            <span className='descrip_recibo'>
-              Siguiente Pago<br/>
-              <span className="fecha_recibo">
-                01/05/23
-              </span>
+            <i className="fa-solid fa-circle-exclamation"></i>
+            <br />
+            <span className="descrip_recibo">
+              Siguiente Pago
+              <br />
+              <span className="fecha_recibo">01/05/23</span>
             </span>
           </li>
         </ul>
       </div>
-      <div className='row-2'>
-        <Form/>
+      <div className="row-2">
+        <Form />
       </div>
     </div>
-  )
-}
+  );
+};
 export function Pago() {
-    const semiRoutes = [
-        <Colegiatura/>,
-        <AbonoMonedero/>, 
-        <PagoServicios/>, 
-        <PagoExtraodinarios/>
-    ]
-    const [indexPage, changeIndex] = useState("0")
-    const [display_pago, changeDisplay] = useState(0)
-    const navClickHandler = (element) =>{
-        let eleIndex = element.dataset.index
-        changeIndex(prev => eleIndex); 
-    }
-    useEffect(() => {
-        changeDisplay(semiRoutes[indexPage])
-    }, [indexPage]);
+  const semiRoutes = [
+    <Colegiatura />,
+    <AbonoMonedero />,
+    <PagoServicios />,
+    <PagoExtraodinarios />,
+  ];
+  const [indexPage, changeIndex] = useState("0");
+  const [display_pago, changeDisplay] = useState(0);
+  const navClickHandler = (element) => {
+    let eleIndex = element.dataset.index;
+    changeIndex((prev) => eleIndex);
+  };
+  useEffect(() => {
+    changeDisplay(semiRoutes[indexPage]);
+  }, [indexPage]);
   return (
     <Fragment>
       <Header />
@@ -223,7 +223,7 @@ export function Pago() {
           Pago de Actividades Extraordinarias
         </li>
       </ul>
-      <main className='main_pago'>{display_pago}</main>
+      <main className="main_pago">{display_pago}</main>
     </Fragment>
   );
 }

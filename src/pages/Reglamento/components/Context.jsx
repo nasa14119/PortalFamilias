@@ -3,7 +3,6 @@ import { max_index, useFileState } from "../hooks/useFileState";
 const contextPdf = createContext(null);
 export function ContextPdf({ children }) {
   const [file, setIndex, currentIndex] = useFileState();
-  console.log(file, setIndex, currentIndex);
   return (
     <contextPdf.Provider
       value={{

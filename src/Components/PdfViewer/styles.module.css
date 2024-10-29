@@ -1,0 +1,134 @@
+.pdfViewer {
+  --toolbar-height: 40px;
+  --round-toolbar: 2rem;
+  --pdf-color: #cf051d;
+  --pdf-background: #202020;
+  --pdf-text: #fff;
+  --rpv-core__inner-page-background-color: var(--pdf-background);
+  padding-block: var(--toolbar-height);
+  padding-inline: 1%;
+  position: relative;
+}
+.pdfViewer[data-horizontal="true"] {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}
+.pdfViewer[data-horizontal="false"] {
+  aspect-ratio: 9 / 16;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+.pdfViewer::after {
+  content: "";
+  background-color: var(--pdf-color);
+  height: var(--toolbar-height);
+  width: 98%;
+  position: absolute;
+  bottom: 0;
+  border-radius: 0px 0px var(--round-toolbar) var(--round-toolbar);
+}
+.toolbar {
+  background-color: var(--pdf-color);
+  height: var(--toolbar-height);
+  width: 98%;
+  position: absolute;
+  top: 0;
+  border-radius: var(--round-toolbar) var(--round-toolbar) 0px 0px;
+  padding-inline: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 1rem;
+}
+.icon {
+  border-radius: 5px;
+  padding: 5px;
+  width: 25px;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  color: var(--pdf-text);
+  transition: opacity 150ms ease;
+}
+.icon:hover {
+  opacity: 50%;
+}
+
+.hide_mobile {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hide_mobile {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .toolbar {
+    padding-inline: 20px;
+  }
+  .icon {
+    width: 30px;
+  }
+}
+.lastItems {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 5px;
+}
+.zoomBtnContainer {
+  --rpv-core__minimal-button-color: var(--pdf-text);
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.pageNumbers {
+  --font-size: 16px;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  justify-content: center;
+}
+.pageNumbers * {
+  margin: 0;
+  padding: 0 !important ;
+}
+.pageNumbers input::-webkit-outer-spin-button,
+.pageNumbers input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pageNumbers input {
+  font-size: var(--font-size);
+  background-color: var(--pdf-color);
+  color: var(--pdf-text);
+  font-size: inherit;
+  border: none;
+  width: 1rem;
+  height: auto;
+  text-align: right;
+  outline: none;
+}
+.pageNumbers input::placeholder {
+  font-size: var(--font-size);
+  color: var(--pdf-text);
+}
+.pageItem {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  height: 100%;
+  width: auto;
+  height: 1rem;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: var(--font-size);
+}
+.pageItem span {
+  width: 1rem;
+}
+.pageItem:last-child {
+  padding-block: 2rem;
+  padding-inline: 1rem;
+  font-size: var(--font-size);
+}

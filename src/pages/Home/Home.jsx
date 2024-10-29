@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./styles.css";
 import { NewsPanel } from "./NewsPanel";
 import { Notification } from "./Notifications";
-import { Calendar } from "./Calendar";
 import { useSlider } from "./Slider";
 export function Home() {
   const [Slider, handleSlider] = useSlider();
