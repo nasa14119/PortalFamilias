@@ -8,11 +8,11 @@ import "@react-pdf-viewer/page-navigation/lib/styles/index.css";
 import ViewPdf from "./ViewPdf";
 const WORKER_URL =
   "https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
-export function PdfViewer({ fileUrl, horizontal }) {
+export function PdfViewer({ fileUrl, horizontal, style }) {
   return (
     <>
       <Worker workerUrl={WORKER_URL}>
-        <ViewPdf fileUrl={fileUrl} horizontal={horizontal} />
+        <ViewPdf fileUrl={fileUrl} horizontal={horizontal} style={style} />
       </Worker>
     </>
   );

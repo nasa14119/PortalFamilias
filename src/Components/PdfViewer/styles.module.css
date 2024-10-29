@@ -10,9 +10,9 @@
   position: relative;
 }
 .pdfViewer[data-horizontal="true"] {
-  aspect-ratio: 16 / 9;
+  /* aspect-ratio: 16 / 9; */
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 .pdfViewer[data-horizontal="false"] {
   aspect-ratio: 9 / 16;
@@ -84,6 +84,7 @@
 }
 .pageNumbers {
   --font-size: 16px;
+  color: var(--pdf-text);
   font-family: inherit;
   display: flex;
   align-items: center;

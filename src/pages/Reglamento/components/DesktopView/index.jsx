@@ -8,6 +8,7 @@ import {
 import styles from "./styles.module.css";
 import FILES from "../../FILES.json";
 import { LeftIcon, RightIcon } from "../Icons/Controls";
+import { MainContent } from "./MainContent";
 DesktopView.propTypes = {};
 
 function DesktopView(props) {
@@ -35,7 +36,7 @@ function DesktopView(props) {
             ))}
           </ul>
         </aside>
-        <div></div>
+        <MainContent />
       </main>
     </main>
   );

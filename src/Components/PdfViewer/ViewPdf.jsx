@@ -6,7 +6,7 @@ import { useDowloadBtn } from "./hooks/DowloadBtn";
 import useZoomBtn from "./hooks/ZoomBtn";
 import { usePageNav } from "./hooks/PageNav";
 import { usePrintBtn } from "./hooks/PrintBtn";
-function ViewPdf({ fileUrl, horizontal }) {
+function ViewPdf({ fileUrl, horizontal, style }) {
   const [FullScreenBtn, fullScreenPlugin] = useFullScreen();
   const [DowloadBtn, dowloadPlugin] = useDowloadBtn();
   const [ZoomContainer, zoomPlugin] = useZoomBtn();
@@ -15,6 +15,7 @@ function ViewPdf({ fileUrl, horizontal }) {
   return (
     <div
       className={styles.pdfViewer}
+      style={style}
       data-horizontal={typeof horizontal !== "undefined"}
     >
       <div className={styles.toolbar}>
