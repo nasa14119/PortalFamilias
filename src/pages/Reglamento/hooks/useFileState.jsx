@@ -1,4 +1,4 @@
-import FILES from "../FILES_2.json";
+import FILES from "../FILES.json";
 import { useEffect, useState } from "react";
 export const max_index = FILES.length;
 export const useFileState = () => {

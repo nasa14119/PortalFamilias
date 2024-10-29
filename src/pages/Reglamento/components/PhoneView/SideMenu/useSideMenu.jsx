@@ -1,4 +1,4 @@
-import FILES from "../../../FILES_2.json";
+import FILES from "../../../FILES.json";
 import { useFileContext, useSetFileTo } from "../../Context";
 import styles from "./styles-menu.module.css";
 import { useToogle } from "./useToggle";

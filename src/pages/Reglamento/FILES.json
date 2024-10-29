@@ -1,50 +1,50 @@
-{
-  "00": {
-    "file": "00 Reglamento General Prepa Ibero 2021_2022.pdf",
+[
+  {
+    "url": "00 Reglamento General Prepa Ibero 2021_2022.pdf",
     "title": "Reglamento General"
   },
-  "01": {
-    "file": "01 Reglamento de transporte 2021_2022.pdf",
+  {
+    "url": "01 Reglamento de transporte 2021_2022.pdf",
     "title": "Reglamento de transporte"
   },
-  "02": {
-    "file": "02 Reglamento del gimnasio de aparatos y pesas.pdf",
+  {
+    "url": "02 Reglamento del gimnasio de aparatos y pesas.pdf",
     "title": "Reglamento del gimnasio de aparatos y pesas"
   },
-  "03": {
-    "file": "03 Reglamento de los laboratorios de cómputo y los servicios de telecomunicaciones.pdf",
+  {
+    "url": "03 Reglamento de los laboratorios de cómputo y los servicios de telecomunicaciones.pdf",
     "title": "Reglamento de los laboratorios de cómputo y los servicios de telecomunicaciones"
   },
-  "04": {
-    "file": "04 Reglamento de la Biblioteca.pdf",
+  {
+    "url": "04 Reglamento de la Biblioteca.pdf",
     "title": "Reglamento de la Biblioteca"
   },
-  "05": {
-    "file": "05 Reglamento de talleres y equipos representativos.pdf",
+  {
+    "url": "05 Reglamento de talleres y equipos representativos.pdf",
     "title": "Reglamento de talleres y equipos representativos"
   },
-  "06": {
-    "file": "06 Reglamento de intercambios y movilidad estudiantil.pdf",
+  {
+    "url": "06 Reglamento de intercambios y movilidad estudiantil.pdf",
     "title": "Reglamento de intercambios y movilidad estudiantil"
   },
-  "07": {
-    "file": "07 Reglamento de laboratorios de ciencias experimentales.pdf",
+  {
+    "url": "07 Reglamento de laboratorios de ciencias experimentales.pdf",
     "title": "Reglamento de laboratorios de ciencias experimentales"
   },
-  "08": {
-    "file": "08 Reglamento de idiomas 2021_2022.pdf",
+  {
+    "url": "08 Reglamento de idiomas 2021_2022.pdf",
     "title": "Reglamento de idiomas"
   },
-  "09": {
-    "file": "09 Protocolo de Atencion para Casos de Violencia de Genero de Prepa Ibero.pdf",
+  {
+    "url": "09 Protocolo de Atencion para Casos de Violencia de Genero de Prepa Ibero.pdf",
     "title": "Protocolo de Atencion para Casos de Violencia de Genero de Prepa Ibero"
   },
-  "010": {
-    "file": "10 Anexo 1 Conceptos sobre Protocolo Casos Violencia de Genero Prepa Ibero.pdf",
+  {
+    "url": "10 Anexo 1 Conceptos sobre Protocolo Casos Violencia de Genero Prepa Ibero.pdf",
     "title": "Anexo 1 Conceptos sobre Protocolo Casos Violencia de Genero Prepa Ibero"
   },
-  "011": {
-    "file": "11 Anexo 2 Glosario Definiciones y Marco Conceptual Protocolo Violencia Genero Prepa Ibero.pdf",
+  {
+    "url": "11 Anexo 2 Glosario Definiciones y Marco Conceptual Protocolo Violencia Genero Prepa Ibero.pdf",
     "title": "Anexo 2 Glosario Definiciones y Marco Conceptual Protocolo Violencia Genero"
   }
-}
+]
