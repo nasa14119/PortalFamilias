@@ -20,11 +20,9 @@ export function useSideMenu() {
           ))}
         </main>
       </div>
-      <div
-        className={styles.hide_menu}
-        onClick={() => setOpen()}
-        data-state={isOpen}
-      ></div>
+      {isOpen && (
+        <div className={styles.hide_menu} onClick={() => setOpen()}></div>
+      )}
     </>
   );
   return [Menu, setOpen];

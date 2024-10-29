@@ -58,9 +58,3 @@
   inset: 0;
   z-index: 40;
 }
-.hide_menu[data-state="true"] {
-  display: block;
-}
-.hide_menu[data-state="false"] {
-  display: none;
-}
