@@ -2,11 +2,11 @@ import React, { Fragment, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { NewsPanel } from "./NewsPanel";
-import {Notification} from "./Notifications"
+import { Notification } from "./Notifications";
 import { Calendar } from "./Calendar";
 import { useSlider } from "./Slider";
 export function Home() {
-  const [Slider, handleSlider] = useSlider(); 
+  const [Slider, handleSlider] = useSlider();
   return (
     <Fragment>
       <header className="header_home">
@@ -28,7 +28,7 @@ export function Home() {
             />
           </svg>
         </span>
-        <Slider/>
+        <Slider />
       </header>
       <main className="main_home">
         <aside className="main_content">
@@ -53,8 +53,10 @@ export function Home() {
                 </Link>
               </li>
               <li id="cuenta_big" onClick={handleSlider}>
-                <i className="fa-solid fa-user"></i>
-                <span>Cuenta</span>
+                <span>
+                  <i className="fa-solid fa-user"></i>
+                  <span>Cuenta</span>
+                </span>
               </li>
             </ul>
           </div>
@@ -62,7 +64,7 @@ export function Home() {
         </aside>
         <NewsPanel />
       </main>
-      <Calendar />
+      {/* <Calendar /> */}
     </Fragment>
   );
 }
