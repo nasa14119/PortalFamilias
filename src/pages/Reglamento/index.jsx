@@ -4,6 +4,7 @@ import FILES from "./FILES.json";
 import "./styles.css";
 import { PhoneView } from "./components/PhoneView";
 import { ContextPdf } from "./components/Context";
+import DesktopView from "./components/DesktopView";
 export function Reglamento() {
   // const TotalFiles = Object.keys(FILES).length;
   // const [menuReglamento, openMenu] = useState(false);
@@ -55,6 +56,7 @@ export function Reglamento() {
     <Fragment>
       <ContextPdf>
         <PhoneView />
+        <DesktopView />
       </ContextPdf>
       {/* 
       <Header />

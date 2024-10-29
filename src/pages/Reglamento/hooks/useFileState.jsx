@@ -1,6 +1,6 @@
 import FILES from "../FILES.json";
 import { useEffect, useState } from "react";
-export const max_index = FILES.length;
+export const max_index = FILES.length - 1;
 export const useFileState = () => {
   const [index, setIndex] = useState(0);
   const [state, setState] = useState(FILES[0]);
