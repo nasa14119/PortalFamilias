@@ -16,7 +16,9 @@ export function useSideMenu() {
         <header>{file.title}</header>
         <main>
           {FILES.map((file, i) => (
-            <span onClick={() => handleClickLink(i)}>{file.title}</span>
+            <span onClick={() => handleClickLink(i)} key={file.title}>
+              {file.title}
+            </span>
           ))}
         </main>
       </div>
