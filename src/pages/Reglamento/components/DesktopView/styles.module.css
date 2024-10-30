@@ -3,6 +3,11 @@
   height: 100dvh;
   grid-template-rows: 1fr 90vh;
 }
+@media (max-width: 768px) {
+  .reglamento {
+    display: none;
+  }
+}
 .reglamento main {
   max-height: 90vh;
   display: grid;
