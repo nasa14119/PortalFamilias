@@ -38,6 +38,7 @@
   }
   .header_home > span {
     width: 17vw;
+    max-width: 50px;
     max-height: unset;
   }
 }
