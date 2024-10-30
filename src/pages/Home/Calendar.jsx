@@ -2,10 +2,16 @@ import { PdfViewer } from "../../Components/PdfViewer";
 import Calendario from "/Calendario Prepa 2022.pdf";
 import { useState } from "react";
 export function Calendar() {
-  const [state, setState] = useState(false);
+  const [state, setState] = useState(null);
+  const handleClick = () => {
+    if (state === null) {
+      return setState(true);
+    }
+    setState((prev) => !prev);
+  };
   return (
     <section className="pdf_caldendario_sec">
-      <div className="open_calendar" onClick={() => setState((prev) => !prev)}>
+      <div className="open_calendar" onClick={handleClick}>
         <h3>
           {state ? (
             <i className="fa-solid fa-chevron-down"></i>

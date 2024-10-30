@@ -408,9 +408,11 @@
   }
 }
 .pdf_conteiner[data-state="true"] .pdf_caldanrio_pdfViewer {
+  opacity: 1;
   animation: fade-in-calendar 500ms forwards;
 }
 .pdf_conteiner[data-state="false"] .pdf_caldanrio_pdfViewer {
+  opacity: 1;
   animation: fade-out-calendar 500ms forwards;
 }
 .pdf_conteiner {
@@ -439,7 +441,8 @@
   }
 }
 .pdf_caldanrio_pdfViewer {
-  height: 100%;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
   margin-bottom: 10px;
 }
