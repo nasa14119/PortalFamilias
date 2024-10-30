@@ -55,3 +55,4 @@ Mi nombre es Nicolas Amaya y soy un desarrollador junior donde este es uno de mi
 
 Pueden saber más de mi en este enlace [https://nicolas-amaya.onrender.com/](https://nicolas-amaya.onrender.com/)
 ![/public/ibero_foto.jpg](public/ibero_foto.jpg)
+![/public/ibero_foto.jpg](public/preview-home.webp)
