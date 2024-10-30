@@ -488,9 +488,6 @@
     position: static;
     padding-inline: 1rem;
   }
-  .header_home > span {
-    width: 50px;
-  }
   body {
     overflow-x: hidden;
   }
