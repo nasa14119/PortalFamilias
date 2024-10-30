@@ -53,4 +53,4 @@ bun run dev
 
 Mi nombre es Nicolas Amaya y soy un desarrollador junior donde este es uno de mis primeros trabajos con el uso exclusivo de react. Estoy abierto de cuaquier comentario o mejora posible. Si te gusta hasmelo saber con una estrella.
 
-Pueden saber más de mi en este enlace [https://nicolas-amaya.onrender.com/](https://nicolas-amaya.onrender.com/)
+Pueden saber más de mi en este enlace [https://nicolas-amaya.onrender.com/](https://nicolas-amaya.onrender.com/) H
