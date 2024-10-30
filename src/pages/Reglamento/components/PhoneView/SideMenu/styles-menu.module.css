@@ -15,6 +15,7 @@
   }
 }
 .menu {
+  color: white;
   background-color: var(--ibero);
   display: flex;
   flex-direction: column;
