@@ -1,15 +1,16 @@
-import React, { Fragment, useState, useRef } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 import { NewsPanel } from "./NewsPanel";
 import { Notification } from "./Notifications";
 import { Calendar } from "./Calendar";
 import { useSlider } from "./Slider";
+import styles from "./styles.module.css";
 export function Home() {
   const [Slider, handleSlider] = useSlider();
   return (
     <Fragment>
-      <header className="header_home">
+      <header className={styles.header_home}>
         <img src="/Prepa_Ibero.svg" alt="Brnad_logo" />
         <h2>Portal Familias</h2>
         <span onClick={handleSlider}>

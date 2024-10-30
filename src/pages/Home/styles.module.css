@@ -1,0 +1,43 @@
+/* Header */
+.header_home {
+  display: flex;
+  align-items: center;
+  padding-inline: 4rem;
+  padding-block: 1rem;
+  margin-block: 1rem;
+  position: sticky;
+  top: -1px;
+  z-index: 60;
+  background-color: var(--background);
+}
+.header_home > img {
+  box-sizing: border-box;
+  padding: 5px 1rem;
+  max-height: 60px;
+  height: 100%;
+}
+.header_home > span {
+  display: grid;
+  place-content: center;
+  margin-left: auto;
+  border: 2px solid var(--color);
+  border-radius: 100%;
+  max-height: 40px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+.header_home svg {
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  width: 60%;
+}
+@media (max-width: 768px) {
+  .header_home {
+    position: relative;
+    padding: 1rem;
+  }
+  .header_home > span {
+    width: 17vw;
+    max-height: unset;
+  }
+}
