@@ -6,9 +6,11 @@ import { useDowloadBtn } from "./hooks/DowloadBtn";
 import useZoomBtn from "./hooks/ZoomBtn";
 import { usePageNav } from "./hooks/PageNav";
 import { usePrintBtn } from "./hooks/PrintBtn";
-function ViewPdf({ fileUrl, horizontal, style }) {
+function ViewPdf({ fileUrl, horizontal, style, dowloadFunc }) {
   const [FullScreenBtn, fullScreenPlugin] = useFullScreen();
-  const [DowloadBtn, dowloadPlugin] = useDowloadBtn();
+  const [DowloadBtn, dowloadPlugin] = useDowloadBtn({
+    dowloadNameFunc: dowloadFunc,
+  });
   const [ZoomContainer, zoomPlugin] = useZoomBtn();
   const [Nav, pagePlugin] = usePageNav();
   const [PrintBtn, printPlugin] = usePrintBtn();

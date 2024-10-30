@@ -5,7 +5,7 @@ export function MainContent() {
   const file = useFileContext();
   return (
     <div className={styles.mainContent}>
-      <PdfViewer fileUrl={file.url} horizontal />
+      <PdfViewer fileUrl={file.url} horizontal dowloadFunc={() => file.title} />
     </div>
   );
 }

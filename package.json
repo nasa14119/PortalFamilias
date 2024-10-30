@@ -16,9 +16,9 @@
     "@react-pdf-viewer/page-navigation": "^3.12.0",
     "@react-pdf-viewer/print": "^3.12.0",
     "@react-pdf-viewer/zoom": "^3.12.0",
-    "pdfjs-dist": "3.11.174",
     "gh-pages": "^5.0.0",
     "moment": "^2.29.4",
+    "pdfjs-dist": "3.11.174",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "6.4.3",
@@ -28,6 +28,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
+    "prop-types": "^15.8.1",
     "vite": "^3.2.5"
   }
 }

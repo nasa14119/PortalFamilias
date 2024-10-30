@@ -21,7 +21,11 @@ export function PhoneView() {
             <span>{file.title}</span>
           </header>
           <div className={styles.viewing}>
-            <PdfViewer fileUrl={file.url} style={{ width: "100%" }} />
+            <PdfViewer
+              fileUrl={file.url}
+              style={{ width: "100%" }}
+              dowloadFunc={() => file.title}
+            />
           </div>
         </section>
       </main>

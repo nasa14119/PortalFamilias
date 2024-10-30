@@ -1,11 +1,11 @@
 import { getFilePlugin } from "@react-pdf-viewer/get-file";
 import styles from "../styles.module.css";
 import DownloadIcon from "../Icons/Dowload";
-export const useDowloadBtn = () => {
+export const useDowloadBtn = (
+  { dowloadNameFunc } = { dowloadNameFunc: () => "dowload.pdf" }
+) => {
   const dowloadInstance = getFilePlugin({
-    fileNameGenerator: () => {
-      return "dowload.pdf";
-    },
+    fileNameGenerator: dowloadNameFunc,
   });
   const { Download } = dowloadInstance;
   const Btn = (props) => <DownloadIcon {...props} className={styles.icon} />;
