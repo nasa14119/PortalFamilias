@@ -19,7 +19,7 @@
   }
 }
 .viewing {
-  background-color: red;
+  height: 80vh;
 }
 @media (min-width: 768px) {
   .main {

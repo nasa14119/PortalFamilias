@@ -1,5 +1,6 @@
 import Header from "../../../../Components/Header";
 import styles from "./styles.module.css";
+import { PdfViewer } from "../../../../Components/PdfViewer";
 import { useFileContext } from "../Context";
 import { useSideMenu } from "./SideMenu/useSideMenu";
 export function PhoneView() {
@@ -19,7 +20,9 @@ export function PhoneView() {
             <i className="fa-solid fa-bars" style={{ fontSize: "7vw" }}></i>
             <span>{file.title}</span>
           </header>
-          <div className={styles.viewing}></div>
+          <div className={styles.viewing}>
+            <PdfViewer fileUrl={file.url} style={{ width: "100%" }} />
+          </div>
         </section>
       </main>
       <SideMenu />
